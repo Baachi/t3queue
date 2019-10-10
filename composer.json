@@ -1,0 +1,57 @@
+{
+    "name": "dmk/typo3-aop",
+    "description": "TYPO3 Extension to enable aop programming.",
+    "type": "typo3-cms-extension",
+    "require": {
+        "php": ">=7.1,<7.3",
+        "enqueue/enqueue": "^0.9",
+        "typo3/cms-core": "^8.7 || ^9.5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7",
+        "enqueue/amqp-bunny": "^0.9",
+        "enqueue/amqp-ext": "^0.9",
+        "enqueue/amqp-lib": "0.9.*",
+        "enqueue/dbal": "0.9.*",
+        "enqueue/fs": "0.9.*",
+        "enqueue/gearman": "0.9.*",
+        "enqueue/gps": "0.9.*",
+        "enqueue/rdkafka": "0.9.*",
+        "enqueue/mongodb": "0.9.*",
+        "enqueue/null": "0.9.*",
+        "enqueue/pheanstalk": "0.9.*",
+        "enqueue/redis": "0.9.*",
+        "enqueue/sns": "0.9.*",
+        "enqueue/snsqs": "0.9.*",
+        "enqueue/sqs": "0.9.*",
+        "enqueue/stomp": "0.9.*",
+        "enqueue/wamp": "0.9.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "DMK\\T3Queue\\": "Classes"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "DMK\\T3Queue\\Tests\\": "Tests"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Markus Bachmann",
+            "email": "markus.bachmann@dmk-ebusiness.com"
+        }
+    ],
+    "extra": {
+        "typo3/cms": {
+            "cms-package-dir": "{$vendor-dir}/typo3/cms",
+            "web-dir": ".Build/Web"
+        }
+    },
+    "config": {
+        "vendor-dir": ".Build",
+        "bin-dir": ".Build/bin"
+    }
+}
